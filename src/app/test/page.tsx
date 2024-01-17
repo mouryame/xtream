@@ -1,12 +1,15 @@
-import Button from '@/components/ui/Button/Button'
-import React from 'react'
+import React from "react";
+import styles from "./Page.module.css";
+import { Button } from "@/components";
 
-function Test() {
+function Page() {
   return (
-    <div style={{width:'100vw', height:'100vh'}}>
-        <Button />
+    <div className={styles.viewContainer}>
+      <Button theme="light" variant="secondary" size="default">
+        Hello
+      </Button>
     </div>
-  )
+  );
 }
 
-export default Test
+export default Page;
