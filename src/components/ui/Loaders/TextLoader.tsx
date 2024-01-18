@@ -1,5 +1,5 @@
 import React from "react";
-import { LoaderStyles } from "./cssIndex";
+import { LoaderStyles } from "./loaderCssIndex";
 
 interface loaderProps {
   theme: string;

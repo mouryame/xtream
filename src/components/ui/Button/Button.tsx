@@ -1,5 +1,5 @@
 import React from "react";
-import { buttonSizes, buttonStyles } from "./cssIndex";
+import { buttonSizes, buttonStyles } from "./btnCssIndex";
 
 interface buttonProps {
   theme: string;
@@ -20,11 +20,11 @@ function Button({
 }: buttonProps) {
   const buttonVariantClass = buttonStyles[theme][variant];
   const buttonSizeClass = buttonSizes[size];
+  const buttonClass = customClass
+    ? `button ${buttonVariantClass} ${buttonSizeClass} ${customClass}`
+    : `button ${buttonVariantClass} ${buttonSizeClass}`;
   return (
-    <button
-      className={`button ${buttonVariantClass} ${buttonSizeClass} ${customClass}`}
-      onClick={onClick}
-    >
+    <button className={buttonClass} onClick={onClick}>
       {children}
     </button>
   );
